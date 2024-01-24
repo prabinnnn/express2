@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const { passwordgenerate } = require("../utils/pass");
-router.use("/", random);
 router.get("/:name", (req, res) => {
   const result = passwordgenerate(
     req.params.name || req.query.name || req.body.name

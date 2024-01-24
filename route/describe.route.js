@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const { descriptiongenerator } = require("../utils/description");
-router.use("/", random);
 router.get("/:name", (req, res) => {
   const result = descriptiongenerator(
     req.params.name || req.query.name || req.body.name
