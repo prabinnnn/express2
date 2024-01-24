@@ -1,8 +1,5 @@
 const router = require("express").Router();
-const {
-  escriptiongenerator,
-  descriptiongenerator,
-} = require("../utils/description");
+const { descriptiongenerator } = require("../utils/description");
 router.use("/", random);
 router.get("/:name", (req, res) => {
   const result = descriptiongenerator(
@@ -34,3 +31,4 @@ router.delete("/:name", (req, res) => {
   );
   res.json({ msg: result });
 });
+module.exports = router;
