@@ -7,7 +7,6 @@ router.use("/proper", propercase);
 router.use("/describe", describe);
 router.use("/ran", ran);
 router.use("/random", random);
-
 router.get("/", (req, res) => {
   res.json({ msg: "hello world" });
 });
